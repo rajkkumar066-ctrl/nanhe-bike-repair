@@ -16,32 +16,40 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header h1 {
   margin: 0;
   color: #38bdf8;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: white;
-  margin-left: 15px;
+  margin: 5px 10px;
   text-decoration: none;
   font-size: 14px;
 }
 
 .hero {
-  padding: 60px 20px;
+  padding: 40px 15px;
   text-align: center;
 }
 
 .hero h2 {
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .hero p {
   color: #94a3b8;
+  font-size: 14px;
 }
 
 .btn {
@@ -61,15 +69,20 @@ nav a {
 }
 
 .section {
-  padding: 40px 20px;
+  padding: 30px 15px;
+}
+
+.section h2 {
+  font-size: 20px;
 }
 
 .card {
   background: #1e293b;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   margin: 10px 0;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 .card:hover {
@@ -80,8 +93,8 @@ nav a {
 .footer {
   background: #020617;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+  padding: 15px;
+  font-size: 12px;
   color: #94a3b8;
 }
 
@@ -97,11 +110,33 @@ input, textarea {
   display: none;
   margin-top: 10px;
   color: #94a3b8;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .card.active .desc {
   display: block;
+}
+
+/* Mobile Map Fix */
+iframe {
+  width: 100% !important;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/* Extra Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
 </style></head><body><header>
   <h1>Nanhe Bike Repair</h1>
@@ -114,30 +149,26 @@ input, textarea {
 </header><section class="hero" id="home">
   <h2>Trusted Bike Repair Service</h2>
   <p>Fast, reliable, and affordable bike servicing near you.</p>
-  <a href="https://wa.me/917079584251" target="_blank"><button class="btn">Book via WhatsApp</button></a>
+  <a href="https://wa.me/917079584251" target="_blank">
+    <button class="btn">Book via WhatsApp</button>
+  </a>
 </section><section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="card" onclick="toggleDesc(this)">
-  ✔ General Bike Service
-  <p class="desc">Complete checkup including cleaning, tuning, and minor fixes for smooth performance.</p>
-</div>
-  <div class="card" onclick="toggleDesc(this)">
-  ✔ Engine Repair
-  <p class="desc">Engine diagnostics and repair for power issues, overheating, and unusual noise.</p>
-</div>
-  <div class="card" onclick="toggleDesc(this)">
-  ✔ Oil Change
-  <p class="desc">High-quality engine oil replacement to improve mileage and engine life.</p>
-</div>
-  <div class="card" onclick="toggleDesc(this)">
-  ✔ Brake & Clutch Fix
-  <p class="desc">Brake adjustment, clutch repair, and safety checks for better control.</p>
-</div>
+  <h2>Our Services</h2>  <div class="card" onclick="toggleDesc(this)">
+    ✔ General Bike Service
+    <p class="desc">Complete checkup including cleaning, tuning, and minor fixes for smooth performance.</p>
+  </div>  <div class="card" onclick="toggleDesc(this)">
+    ✔ Engine Repair
+    <p class="desc">Engine diagnostics and repair for power issues, overheating, and unusual noise.</p>
+  </div>  <div class="card" onclick="toggleDesc(this)">
+    ✔ Oil Change
+    <p class="desc">High-quality engine oil replacement to improve mileage and engine life.</p>
+  </div>  <div class="card" onclick="toggleDesc(this)">
+    ✔ Brake & Clutch Fix
+    <p class="desc">Brake adjustment, clutch repair, and safety checks for better control.</p>
+  </div>
 </section><section class="section" id="location">
   <h2>Our Location</h2>
-  <p><strong>Address:</strong> Nanhe Bike Repair,Opposite of Central Bank, Gupta Market, Anisabad, Patna-02, Bihar</p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.583102906619!2d85.09451387777024!3d25.58553327746287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed570006b42403%3A0x3eec842a22055bee!2sNanhe%20Bike%20Repair!5e0!3m2!1sen!2sin!4v1775241482154!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+  <p><strong>Address:</strong> Nanhe Bike Repair, Opposite of Central Bank, Gupta Market, Anisabad, Patna-02, Bihar</p>  <!-- Updated Mobile Friendly Map -->  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.583102906619!2d85.09451387777024!3d25.58553327746287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed570006b42403%3A0x3eec842a22055bee!2sNanhe%20Bike%20Repair!5e0!3m2!1sen!2sin!4v1775241482154!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
 </section><section class="section" id="about">
   <h2>About Us</h2>
   <p>Nanhe Bike Repair Shop provides professional bike repair services with experienced mechanics. We focus on quality work and customer satisfaction.</p>
@@ -146,8 +177,7 @@ input, textarea {
   <p><strong>WhatsApp:</strong> 7079584251</p>
 </section><div class="footer">
   © 2026 Nanhe Bike Repair Shop | Contact: 9304063706 | WhatsApp: 7079584251
-</div><section class="section" id="location">
-</section><script>
+</div><script>
 function toggleDesc(card) {
   card.classList.toggle("active");
 }
