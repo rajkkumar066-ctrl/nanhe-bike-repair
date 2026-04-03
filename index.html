@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanhe Bike Repair Shop</title><style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  background: #020617;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+.btn {
+  background: #38bdf8;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #38bdf8;
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.footer {
+  background: #020617;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.desc {
+  display: none;
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.card.active .desc {
+  display: block;
+}
+</style></head><body><header>
+  <h1>Nanhe Bike Repair</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><section class="hero" id="home">
+  <h2>Trusted Bike Repair Service</h2>
+  <p>Fast, reliable, and affordable bike servicing near you.</p>
+  <a href="https://wa.me/917079584251" target="_blank"><button class="btn">Book via WhatsApp</button></a>
+</section><section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="card" onclick="toggleDesc(this)">
+  ✔ General Bike Service
+  <p class="desc">Complete checkup including cleaning, tuning, and minor fixes for smooth performance.</p>
+</div>
+  <div class="card" onclick="toggleDesc(this)">
+  ✔ Engine Repair
+  <p class="desc">Engine diagnostics and repair for power issues, overheating, and unusual noise.</p>
+</div>
+  <div class="card" onclick="toggleDesc(this)">
+  ✔ Oil Change
+  <p class="desc">High-quality engine oil replacement to improve mileage and engine life.</p>
+</div>
+  <div class="card" onclick="toggleDesc(this)">
+  ✔ Brake & Clutch Fix
+  <p class="desc">Brake adjustment, clutch repair, and safety checks for better control.</p>
+</div>
+</section><section class="section" id="location">
+  <h2>Our Location</h2>
+  <p><strong>Address:</strong> Opposite of Central Bank, Gupta Market, Anisabad, Patna-02, Bihar</p>
+  <iframe
+    src="https://www.google.com/maps?q=Opposite%20of%20Central%20Bank%2C%20Gupta%20Market%2C%20Anisabad%2C%20Patna%2002%20Bihar&output=embed"
+    width="100%"
+    height="250"
+    style="border:0; border-radius:10px; margin-top:10px;">
+  </iframe>
+</section><section class="section" id="about">
+  <h2>About Us</h2>
+  <p>Nanhe Bike Repair Shop provides professional bike repair services with experienced mechanics. We focus on quality work and customer satisfaction.</p>
+  <p><strong>Address:</strong> Opposite of Central Bank, Gupta Market, Anisabad, Patna-02, Bihar</p>
+  <p><strong>Contact:</strong> 9304063706</p>
+  <p><strong>WhatsApp:</strong> 7079584251</p>
+</section><div class="footer">
+  © 2026 Nanhe Bike Repair Shop | Contact: 9304063706 | WhatsApp: 7079584251
+</div><section class="section" id="location">
+</section><script>
+function toggleDesc(card) {
+  card.classList.toggle("active");
+}
+</script></body>
+</html>
